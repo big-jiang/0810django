@@ -1,0 +1,17 @@
+1.新建项目
+2.新建应用
+3.新建视图函数hello_world
+4.配置数据库属性
+5.导入原始数据input_data.py（将模型类导入放在django注册启动之后）先试用前人给予的结构，在巨人的肩膀上前行，相信自己一定可以解决的
+6.初始blog应用的功能
+7.选择合适xadmin的文件——>官方源码xadmin文件夹+requirements.txt
+7.1下载最新的xadmin源码资源
+7.2pip install -r requirements.txt可能会因为超时而失败，这时多试几次就好了（以 -r的形式安装）
+7.3将xadmin应用以及部分属性添加至项目中（国际化设置、）
+7.4修改路由文件 使用xadmin的自动发现函数、使用version模块自动注册需要版本控制的 Model（添加四行代码）并添加xadmin的新路由
+7.5为模型类定义给模型对象返回对象的函数__str__并设置元数据
+7.6在每个App内创建adminx.py的文件（与admin并列）定义相关的管理器并为对应的模型类注册
+7.7为App设置直观的verbose_name
+7.8迁移数据库数据python manage.py makemigrations/migrate
+8.创建超级权限的用户python manage.py createsuperuser
+9.运行服务python manage.py runserver

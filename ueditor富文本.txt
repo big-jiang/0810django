@@ -1,0 +1,16 @@
+1.选择合适ueditor的文件——>源码DjangoUeditor文件夹（匹配python3.0版本的）
+1.1下载最新的DjangoUeditor源码资源（可能因为网速下载的内容有缺失）
+1.2将 DjangoUeditor 添加到setting.py配置文件中的APP里面
+1.3添加DjangoUeditor的新路由，配置URL信息
+1.4创建对应的Model里面的字段UEditorField
+1.4.1设定保存路径media（主要用于的图片/文件保存和访问）
+1.4.2在settings.py定义media对应的url和根目录
+1.4.3在项目的urls.py中添加已定义的路径
+1.5在xadmin中添加插件UEditor的文件并将ueditor添加到plugin下的_init_中
+1.6在对应的应用内修改adminx.py的文件（与admin并列）定义相关model的管理器并为对应的模型类注册以及为对应的字段设置style_field，赋值ueditor
+1.7在前端显示的时候需要加上关闭转义字符或者使用{{ content|safe }}
+{% autoescape off %}
+{{ conten }}
+{% endautoescape %}
+1.8直接xadmin中的Ueditor保存的数据原样输出
+1.8.1无法直接输出querySET,因此要赋值对应字段，然后在输出（如何查找对应的数据？？？）
